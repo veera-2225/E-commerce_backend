@@ -7,6 +7,10 @@ const dotEnv = require("dotenv");
 const app = express();
 dotEnv.config();
 
+app.use(express.json())
+
+const PORT = process.env.PORT || 8080;
+
 app.use(cors());
 app.use("/", route);
 
@@ -21,7 +25,7 @@ const connection = async () => {
   }
 };
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log("Server started");
   connection();
 });
