@@ -18,7 +18,7 @@ app.use("/uploads", express.static("uploads"));
 
 const connection = async () => {
   try {
-    mongoose.connect(process.env.MONGO_URL);
+    mongoose.connect("mongodb+srv://veerababu4p4_db_user:k8PUnCKKfdmCup5u@poductcluster.ngcpxu3.mongodb.net/?appName=PoductCluster");
     console.log("Database connected");
   } catch (error) {
     console.log("Error while connecting Database", error)
